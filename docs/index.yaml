@@ -1,0 +1,14 @@
+apiVersion: v1
+entries:
+  node-red:
+  - apiVersion: v2
+    appVersion: 0.0.1
+    created: "2023-12-26T13:23:28.033449324Z"
+    description: A Helm chart for Kubernetes
+    digest: 6b7962619caaf1ff3bbe097a12054ef116eeecaadd3c02704f098e0a677bbb0e
+    name: node-red
+    type: application
+    urls:
+    - https://michaelkoch.github.io/node-red-0.0.1.tgz
+    version: 0.0.1
+generated: "2023-12-26T13:23:28.032085222Z"
