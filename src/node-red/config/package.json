@@ -2,5 +2,9 @@
     "name": "node-red-project-template",
     "description": "A Node-RED Project",
     "version": "0.0.1",
-    "private": true
+    "private": true,
+    "dependencies": {
+        "@node-red-contrib-themes/theme-collection": "^3.1.7",
+        "node-red-contrib-throttle": "~0.1.7"
+    }
 }

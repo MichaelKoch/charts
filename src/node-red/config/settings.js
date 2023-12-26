@@ -260,7 +260,7 @@ module.exports = {
                  * trace - record very detailed logging + debug + info + warn + error + fatal errors
                  * off - turn off all logging (doesn't affect metrics or audit)
                  */
-                level: "trace",
+                level: "warn",
                 /** Whether or not to include metric events in the log output */
                 metrics: false,
                 /** Whether or not to include audit events in the log output */
@@ -338,7 +338,7 @@ module.exports = {
              * See https://github.com/node-red-contrib-themes/theme-collection for
              * a collection of themes to chose from.
              */
-            theme: "dark",
+            theme: "dark-scroll",
     
             /** To disable the 'Welcome to Node-RED' tour that is displayed the first
              * time you access the editor for each release of Node-RED, set this to false
