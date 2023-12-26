@@ -1,6 +1,6 @@
 # This is a basic workflow to help you get started with Actions
 
-name: Publish HELM charts
+name: CI
 
 # Controls when the workflow will run
 on:
@@ -25,7 +25,10 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v3
       - uses: azure/setup-helm@v3
-        
+        with:
+          version: 'latest' # default is latest (stable)
+          token: ${{ secrets.GITHUB_TOKEN }} # only needed if version is 'latest'
+          id: install
 
       # Runs a single command using the runners shell
       - name: Run a one-line script
