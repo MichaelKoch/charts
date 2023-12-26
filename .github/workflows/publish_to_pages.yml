@@ -44,7 +44,12 @@ jobs:
               helm package ./src/node-red -d ./repo/  &&
               helm repo index --url https://michaelkoch.github.io/charts --merge ./repo/index.yaml ./repo
               cp ./src/**/*/*.html ./repo
-
+      - name: generate docs
+        uses: ZacJW/markdown-html-action@1.1.0
+        with:
+          input_files: '[**/*.md]'
+          output_files: '["repo/index.html"]'
+         
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
