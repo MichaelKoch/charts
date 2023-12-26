@@ -42,7 +42,7 @@ jobs:
         run: |           
               helm package ./src/node-red -d ./repo/  &&
               helm repo index --url https://michaelkoch.github.io/charts --merge ./repo/index.yaml ./repo
-        
+              cp robots.txt ./repo/robots.txt
 
       - name: Converts Markdown to HTML
         uses: jaywcjlove/markdown-to-html-cli@main
