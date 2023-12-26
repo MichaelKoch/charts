@@ -1,0 +1,14 @@
+apiVersion: v1
+entries:
+  k8s-helm-node-red:
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2023-12-26T09:41:10.095209631Z"
+    description: A Helm chart for Kubernetes
+    digest: 3c2082f7c7fa9c3f9f26f3feaec04908c9578ad00573a9df59221bc9587a57f4
+    name: k8s-helm-node-red
+    type: application
+    urls:
+    - https://github.com/MichaelKoch/k8s-helm-node-red.git/k8s-helm-node-red-0.1.0.tgz
+    version: 0.1.0
+generated: "2023-12-26T09:41:10.092109414Z"

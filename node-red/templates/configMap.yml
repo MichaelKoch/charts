@@ -1,0 +1,25 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{ .Release.Name }}-config
+data:
+  flows.json: |-
+{{- if .Values.flows}}
+  {{- .Values.flows | nindent 4 -}}
+{{- else }} 
+  {{- .Files.Get "config/flows.json" | nindent 4 -}}
+{{- end }}
+  package.json: |-
+{{- if .Values.package}}
+  {{- .Values.package | nindent 4 -}}
+{{- else }} 
+  {{- .Files.Get "config/package.json" | nindent 4 -}}
+{{- end }}
+  settings.js: |-
+{{- if .Values.settings}}
+  {{- .Values.settings | nindent 4 -}}
+{{- else }} 
+  {{- .Files.Get "config/settings.js" | nindent 4 -}}
+{{- end }}
+
+
