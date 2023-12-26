@@ -26,7 +26,7 @@ jobs:
     # Deploy to the github-pages environment
     environment:
       name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
+      url: https://michaelkoch.github.io/charts
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
@@ -42,7 +42,7 @@ jobs:
       - name: Run a multi-line script
         run: |
               helm package ./src/node-red -d ./repo/  &&
-              helm repo index --url https://michaelkoch.github.io/ --merge ./repo/index.yaml ./repo
+              helm repo index --url https://michaelkoch.github.io/charts --merge ./repo/index.yaml ./repo
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
