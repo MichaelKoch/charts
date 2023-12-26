@@ -16,7 +16,7 @@ service:
 ingress:
   enabled: true
   hosts:
-    - host: k8s.whateever.de
+    - host: replace.me.with.the.real.host.com
       paths:
         - path: /
           pathType: ImplementationSpecific
@@ -24,7 +24,7 @@ ingress:
 
 persistence:
   enabled: true
-  storageClass: "local-path"
+  storageClass: ""
   accessMode: ReadWriteOnce
   size: 1Gi
 
